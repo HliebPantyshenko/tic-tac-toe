@@ -7,7 +7,6 @@ const Page: React.FC = () => {
   return (
     
     <div>
-      <h1>Моя страница</h1>
       <Game /> {}
     </div>
   );

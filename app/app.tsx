@@ -31,13 +31,16 @@ const Board: React.FC<BoardProps> = ({ xIsNext, squares, onPlay }) => {
     nextSquares[i] = xIsNext ? "X" : "O";
     onPlay(nextSquares);
   };
+  
+  
 
   const winner = calculateWinner(squares);
-  const status = winner ? `Winner: ${winner}` : `Next player: ${xIsNext ? "X" : "O"}`;
-
+  let status = winner ? `Winner: ${winner}` : `Next player: ${xIsNext ? "X" : "O"}`;
+  status = (squares.includes(null)) ? status : `Game over`;
+  
   return (
     <>
-      <div className="stat">{status}</div>
+      <div className="status">{status}</div>
       <div className="board">
         <div className="board-row">
           <Square value={squares[0]} onSquareClick={() => handleClick(0)} />

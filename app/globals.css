@@ -24,7 +24,7 @@ h2 {
 
 .square {
   background-color: #202328;
-  border: 5px solid red;
+  border: 5px solid red(0, 247, 255, 0.521);
   border-width: 5px;
   color: white;
   float: left;
@@ -109,6 +109,6 @@ h2 {
 }
 
 .status{
-
-  color: white;
+  font-family: "Press Start 2P";
+  color: red;
 }
